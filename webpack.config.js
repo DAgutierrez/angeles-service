@@ -7,7 +7,7 @@ var libPath = path.join(__dirname, 'lib');
 
 module.exports = {
   devtool: 'sourcemap',
-  entry: path.join(__dirname, 'lib/index.js'),
+  entry: path.join(__dirname, 'app/index.js'),
   output: {
     filename: 'bundle.js',
     path       : path.resolve(__dirname, 'www')

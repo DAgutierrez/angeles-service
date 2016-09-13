@@ -2,8 +2,7 @@ import modConfig from './home.config';
 
 let mod = angular.module('prototype.home', [
   'ionic',
-  'ui.router',
-  'prototype.constant'
+  'ui.router'
 ]);
 
 mod.config(modConfig);
