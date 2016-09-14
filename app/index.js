@@ -1,6 +1,5 @@
 
 import 'ionic-sdk/release/js/ionic.bundle';
-
 // Our modules
 
 import modRun from './run.js';
@@ -9,6 +8,7 @@ import modMenu from './components/menu/menu.module.js';
 
 // Style entry point
 import './common/scss/bootstrap';
+
 
 // Create our prototype module
 let mod = angular.module('prototype', [

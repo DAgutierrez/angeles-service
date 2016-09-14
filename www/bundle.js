@@ -72,7 +72,6 @@
 	
 	// Create our prototype module
 	
-	
 	// Our modules
 	
 	var mod = angular.module('prototype', ['ionic', 'ui.router', _homeModule2.default, _menuModule2.default]);
@@ -64557,7 +64556,7 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	module.exports = "<ion-view>\n  <ion-nav-title>Home</ion-nav-title>\n  <ion-content style=\"background-color: #eee;\">\n      <h1>Home</h1>\n  </ion-content>\n</ion-view>\n";
+	module.exports = "<ion-view>\n  <ion-nav-title>Home</ion-nav-title>\n  <ion-content style=\"background-color: #eee;\">\n      <h1>Home Test</h1>\n  </ion-content>\n</ion-view>\n";
 
 /***/ },
 /* 6 */

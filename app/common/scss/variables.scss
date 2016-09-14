@@ -15,4 +15,4 @@ $base-color: $primary-color-text;
 $bar-height: 64px;
 
 // Ionicons font path
-$ionicons-font-path: "~ionic-sdk/release/fonts" !default;
+$ionicons-font-path: "../../../node_modules/ionic-sdk/release/fonts" !default;

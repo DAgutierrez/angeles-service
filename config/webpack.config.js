@@ -4,18 +4,22 @@
 var path    = require('path');
 var webpack = require('webpack');
 var libPath = path.join(__dirname, 'lib');
+var BowerWebpackPlugin = require("bower-webpack-plugin");
+
+var dirname = __dirname;
+var pathname = dirname.substring(0,dirname.lastIndexOf("/"));
 
 module.exports = {
   devtool: 'sourcemap',
-  entry: path.join(__dirname, 'app/index.js'),
+  entry: {},
   output: {
     filename: 'bundle.js',
-    path       : path.resolve(__dirname, 'www')
+    path       : path.resolve(pathname, 'www')
   },
   module : {
     loaders : [ {
       test: /\.js$/,
-      exclude: [/lib\/index.js/, /node_modules/],
+      exclude: [/lib\/index.js/, /node_modules/, /bower_components/ ],
       loader: 'ng-annotate?add=true!babel'
     },  {
       test   : /\.s?css$/,
@@ -44,10 +48,19 @@ module.exports = {
     extensions: ['', '.js', '.json', '.scss', '.html'],
     root: [
       libPath,
-      path.join(__dirname, 'node_modules')
+      path.join(__dirname, 'node_modules' )
     ],
     moduleDirectories: [
-      'node_modules'
-    ]
-  }
+      'node_modules',
+      'bower_components'
+    ],
+  },
+  plugins: [
+
+    // new BowerWebpackPlugin({
+    //   excludes: /.*\.less/
+    // }),
+    // new webpack.ProvidePlugin({
+    // })
+  ]
 };
